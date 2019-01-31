@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>展开、折叠</title>
+    <meta charset="utf-8" />
+    <link href="../css/ys.display.css" rel="stylesheet" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <style>
+        .box {
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+        .display-state-arrow {
+            width: 1em;
+            height: 1em;
+        }
+    </style>
+    <style>
+        .poetry {
+            margin: 10px;
+            width: 200px;
+            border: 4px double #ccc;
+            background: #eee;
+            float: left;
+        }
+
+            .poetry header h3 {
+                margin: 5px 10px;
+            }
+
+            .poetry footer {
+                margin: 20px 3px 5px;
+                padding: 5px 0 0;
+                font-size: .8em;
+                border-top: 1px dotted #366;
+                position: relative;
+            }
+
+                .poetry footer a {
+                    position: absolute;
+                    right: 0;
+                    bottom: 100%;
+                    margin-bottom: 5px;
+                }
+
+            .poetry section p {
+                margin: 0;
+                font-size: 12px;
+                line-height: 14px;
+            }
+    </style>
+    <style>
+        .box2 {
+            clear: both;
+            width: 200px;
+            height: 300px;
+            display: inline-block;
+            background-color: #4cff00;
+        }
+    </style>
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <style>
+        #zoompanel {
+            /*font-size: 0;
+            display: inline-block;*/
+        }
+
+        .inline-container {
+            -webkit-text-size-adjust: none;
+            font-size: 0;
+        }
+
+            .inline-container > * {
+                display: inline-block;
+                font-size: initial;
+            }
+
+        #zoompanel > li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            height: 100px;
+            display: inline-block;
+            font-size: initial;
+        }
+
+            #zoompanel > li > div {
+                width: 300px;
+                height: 100%;
+                background-color: #ccc;
+            }
+
+            #zoompanel > li > p {
+                margin: 0;
+                width: 50px;
+                height: 100%;
+                background-color: #ff6a00;
+            }
+
+            #zoompanel > li > p, #zoompanel > li > div {
+                float: left;
+            }
+    </style>
+</head>
+<body>
+    <div class="display-close"  data-display-kind="multiple">
+        <a href="javascript:;" data-display-target=".box">
+            <span class="display-state-text"></span>
+            <img class="display-state-arrow" src="../images/arrow_up.png" />
+        </a>
+        <div class="box" id="test_panel" >
+            /*不要在样式中控制初始的显示隐藏状态*/
+        </div>
+    </div>
+    <div class="display-open" data-display-kind="multiple">
+        <a href="javascript:;" data-display-target=".box">
+            <span class="display-state-text"></span>
+            <img class="display-state-arrow" src="../images/arrow_up.png" />
+        </a>
+        <div class="box" id="test_panel" style="display:block">
+            /*不要在样式中控制初始的显示隐藏状态*/
+        </div>
+    </div>
+    <div class="clear">
+        <div class="poetry display-open">
+            <header><h3>孤雁儿</h3></header>
+            <section>
+                <p>世人作梅词，下笔便俗。予试作一篇，乃知前言不妄耳。</p>
+                <p>
+                    藤床纸帐朝眠起，
+                    <br>说不尽、无佳思。
+                    <br>沈香烟断玉炉寒，
+                    <br>伴我情怀如水。
+                    <br>笛声三弄，
+                    <br>梅心惊破，
+                    <br>多少春情意。
+                </p>
+                <p>
+                    小风疏雨萧萧地，
+                    <br>又催下、千行泪。
+                    <br>吹箫人去玉楼空，
+                    <br>肠断与谁同倚？
+                    <br>一枝折得，
+                    <br>人间天上，
+                    <br>没个人堪寄。
+                </p>
+            </section>
+            <footer>
+                作者：李清照
+                <a href="javascript:;" data-display-target="section">
+                    <span class="display-state-text"></span>
+                    <img class="display-state-arrow" src="../images/arrow_up.png" />
+                </a>
+            </footer>
+        </div>
+        <div class="poetry display-close">
+            <header><h3>孤雁儿</h3></header>
+            <section style="display:none">
+                <p>世人作梅词，下笔便俗。予试作一篇，乃知前言不妄耳。</p>
+                <p>
+                    藤床纸帐朝眠起，
+                    <br>说不尽、无佳思。
+                    <br>沈香烟断玉炉寒，
+                    <br>伴我情怀如水。
+                    <br>笛声三弄，
+                    <br>梅心惊破，
+                    <br>多少春情意。
+                </p>
+                <p>
+                    小风疏雨萧萧地，
+                    <br>又催下、千行泪。
+                    <br>吹箫人去玉楼空，
+                    <br>肠断与谁同倚？
+                    <br>一枝折得，
+                    <br>人间天上，
+                    <br>没个人堪寄。
+                </p>
+            </section>
+            <section style="display:none">
+                <p>世人作梅词，下笔便俗。予试作一篇，乃知前言不妄耳。</p>
+                <p>
+                    藤床纸帐朝眠起，
+                    <br>说不尽、无佳思。
+                    <br>沈香烟断玉炉寒，
+                    <br>伴我情怀如水。
+                    <br>笛声三弄，
+                    <br>梅心惊破，
+                    <br>多少春情意。
+                </p>
+                <p>
+                    小风疏雨萧萧地，
+                    <br>又催下、千行泪。
+                    <br>吹箫人去玉楼空，
+                    <br>肠断与谁同倚？
+                    <br>一枝折得，
+                    <br>人间天上，
+                    <br>没个人堪寄。
+                </p>
+            </section>
+            <footer>
+                作者：李清照
+                <a href="javascript:;" data-display-target="section">
+                    <span class="display-state-text"></span>
+                    <img class="display-state-arrow" src="../images/arrow_up.png" />
+                </a>
+            </footer>
+        </div>
+    </div>
+
+    <a href="http://www.codefans.net/jscss/code/4846.shtml">原文效果</a>
+
+    <ul id="zoompanel" class="inline-container" data-display-animation="zoom"  data-display-kind="single" data-display-speed="fast">
+        <li class="display-open">
+            <p data-display-target="div">面板1</p><div></div>
+        </li>
+        <li class="display-close">
+            <p data-display-target="div">面板2</p><div style=""></div>
+        </li>
+        <li class="display-close">
+            <p data-display-target="div">面板2</p><div ></div>
+        </li>
+    </ul>
+    <script src="../js/jquery.display.js"></script>
+
+    <script>
+        $(function () {
+            //$('#zoompanel').display();
+            $('[data-display-kind]').display();
+            $('.poetry').display();
+        })
+       
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>自动执行函数(JQ+js)</title>
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <script src="../js/jquery.autoinit.js"></script>
+</head>
+<body>
+    <div>
+        <span data-autoinit="add(1,3,this);"></span>
+        <span data-autoinit="$(this).load('autoinit_data.txt')">--</span>
+        <div data-autoinit="$(this).loadValue('autoinit_data.txt')">
+            <!--这个是模板开始-->
+            名称：<span data-prop="Name"></span>
+            价格：<span data-prop="Price"></span>
+            数量：<span data-prop="Count"></span>
+            缩率图大小：<span data-prop="ImageInfo.SZ"></span>
+            <!--这个是模板开始-->
+        </div>
+    </div>
+    <script>
+        function add(text2, text3, element) {
+            $(element).text(text2 + text3);
+        }
+    </script>
+    <script src="../js/jquery.common.js"></script>
+</body>
+</html>

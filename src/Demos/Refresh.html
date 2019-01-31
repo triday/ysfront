@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>上拉刷新</title>
+    <meta charset="utf-8" />
+    <link href="../css/jquery.refresh.css?v=1" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.1.0.slim.js"></script>
+    <script src="../js/jquery.refresh.js?v=2"></script>
+</head>
+<body>
+    <!-- body 顶部加上如下代码 -->
+    <div class="pull-refresh-layer">
+        <div class="down-img"></div>
+        <!-- 上下拉动的时候显示的箭头 -->
+        <div class="loading-img"></div>
+        <!-- 正在刷新的菊花 -->
+        <div class="down">下拉刷新</div>
+        <!-- 下拉过程显示的文案 -->
+        <div class="up">释放刷新</div>
+        <!-- 下拉超过50px显示的文案 -->
+        <div class="refresh">正在刷新...</div>
+        <!-- 正在刷新时显示的文案 -->
+    </div>
+    <div>
+        <ul>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+            <li>下拉刷新时间</li>
+        </ul>
+    </div>
+
+    <script>
+        $(function () {
+            $(document.body).pullToRefresh();
+            $(document.body).on("pull-to-refresh", function () {
+                //do something
+                setTimeout(function () {
+                    $(document.body).pullToRefreshDone();//完成刷新
+                    //console.log('下拉刷新完成');
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>

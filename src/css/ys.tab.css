@@ -1,0 +1,6 @@
+﻿.tab-body>ul>li {
+    display: none;
+}
+    .tab-body>ul>li.active {
+        display: block;
+    }

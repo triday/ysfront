@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../js/sc.js"></script>
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <script src="../js/ys.actionRun.js"></script>
+</head>
+<body>
+    <input id="input" />
+    <div id="res">
+
+    </div>
+  
+    <script>
+        $(function () {
+            $('#input').on('keydown', function () {
+                $('#res').append('KeyDown================<br >');
+                window.delayRun(500, function () {
+                    $('#res').append('DelayRun+++++++++<br >');
+                })
+            });
+            $(window).on('scroll', function () {
+               console.log('Scroll================<br >');
+                window.sweepRun(500, function () {
+                    console.log('SweepRun+++++++++<br >');
+                })
+            })
+        });
+    </script>
+</body>
+</html>

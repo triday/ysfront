@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>多状态</title>
+    <meta charset="utf-8" />
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <link href="../css/ys.state.css" rel="stylesheet" />
+    <style>
+        #t1 > div {
+            height:40px;
+            width:60px;
+            text-align:center;
+            margin:0 auto;
+            background-color:lightcyan;
+        }
+    </style>
+    <script src="../js/jquery.state.js"></script>
+</head>
+<body>
+    <div id="t1" class="on">
+        <div class="state-on" style="display:block">On</div>
+        <div class="state-off">Off</div>
+    </div>
+    <div class="error">
+        <div class="state-a">a</div>
+        <div class="state-b">b</div>
+        <div class="state-c">c</div>
+    </div>
+    <script>
+        $(function () {
+            
+            $('#t1').state('off');
+        })
+    </script>
+</body>
+</html>

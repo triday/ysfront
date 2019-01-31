@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>选项卡</title>
+
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <link href="../css/ys.list.css" rel="stylesheet" />
+    <link href="../css/ys.nav.css" rel="stylesheet" />
+    <link href="../css/ys.tab.css" rel="stylesheet" />
+    <script src="../js/jquery.tab.js"></script>
+
+</head>
+<body>
+    <div class="tab" data-tab-action="click">
+        <div class="tab-header nav">
+            <ul>
+                <li><a href="">选项卡1</a></li>
+                <li ><a href="http://www.baidu.com">选项卡2</a></li>
+                <li><a href="">选项卡3</a></li>
+            </ul>
+        </div>
+        <div class="tab-body">
+            <ul>
+                <li id="p01" style="height: 500px; background-color: red">
+                    1
+                </li>
+                <li id="p02" style="height: 500px; background-color: green">
+                    2
+                </li>
+                <li id="p03" style="height: 500px; background-color: blue">
+                    3
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <button class="settab">
+        0
+    </button>
+    <button class="settab">
+        1
+    </button>
+    <button class="settab">
+        2
+    </button>
+    <script>
+        $(function () {
+            $('.tab').tab();
+            $('.settab').on('click', function () {
+                //$('.tab').activeTab($(this).text());
+                $('.tab').activeTab($('.nav>ul>li').eq($(this).text())[0]);
+            });
+        });
+
+    </script>
+</body>
+</html>

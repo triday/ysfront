@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            /*writing-mode:vertical-lr;*/
+        }
+
+        div {
+            background: #ddff87;
+            /*height: 50px;*/
+            margin: 0 5px;
+            padding:0 20px;
+            line-height:50px;
+            
+            /*border:1px solid #00ff90;*/
+        }
+
+        .begin-group {
+            margin-top: 10px;
+            border-top-left-radius: 2px;
+            border-top-right-radius:2px;
+        }
+
+        .end-group {
+            margin-bottom: 10px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        /*.box:not(.begin-group) {
+            border-top: 1px solid red;
+        }*/
+        .box:not(.begin-group):before {
+            content:'';
+            position:absolute;
+            left:20px;
+            right:10px;
+            height:1px;
+            border-top:1px solid blue;
+        }
+
+        /*.group ~ .group {
+                border-top:0;
+            }*/
+        /*.box {
+            box-sizing: border-box;
+            display: block;
+            width: 50px;
+            background-color: #808080;
+            height: 50px;
+            margin: 50px;
+            overflow:hidden;
+        }*/
+
+        /*.box:nth-child(2n+1) {
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }*/
+    </style>
+</head>
+<body>
+    <div class="box begin-group">
+        a
+    </div>
+    <div class="box begin-group">
+        a
+    </div>
+    <div class="box">
+        a
+    </div>
+    <div class="box  end-group">
+        a
+    </div>
+    <div class="box begin-group">
+        啊
+    </div>
+    <div class="box">
+        啊
+    </div>
+    <div class="box end-group">
+        啊
+    </div>
+    <div class="box begin-group">
+        啊
+    </div>
+    <div class="box begin-group">
+        <p class="single-line">
+            啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+
+        </p>
+    </div>
+    <div class="box begin-group">
+        啊
+    </div>
+    <div class="box end-group">
+        啊
+    </div>
+</body>
+</html>

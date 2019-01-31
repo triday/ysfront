@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../js/ys.timespan.js"></script>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+
+    <script>
+        var timespan = new Timespan(new Date().getTime());
+        setInterval(function () {
+           var span= timespan.addSeconds(1).getSpan();
+            var r = document.getElementById('result');
+            r.innerText = span.Day + ':' + span.Hour + ':' + span.Minute + ':' + span.Seconds;
+        }, 1000);
+    </script>
+</body>
+</html>

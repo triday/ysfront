@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../css/jquery.popup.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <script src="../js/jquery.popup.js?v=111"></script>
+    <style>
+        .btns > button {
+            margin: 10px;
+        }
+
+        .warning {
+            text-align: left;
+            color: #f00;
+        }
+
+        .flex-between {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+
+        .qcode {
+            background-color: #fff;
+            padding: 20px 5px;
+            text-align: center;
+            border-radius: 5px;
+            /*border:1px solid groove;*/
+        }
+
+            .qcode > img {
+                max-width: 80%;
+            }
+
+            .qcode .leftTime {
+                color: red;
+                margin: 0 .2em;
+            }
+    </style>
+
+</head>
+<body>
+    <script id="showinput_content" type="text/html">
+        <input type="tel" placeholder="您的电话号码" />
+        <p>
+            <span class="res"></span>
+        </p>
+    </script>
+    <script id="showalert3_content" type="text/html">
+        <p>
+            <i class="fa fa-paperclip" aria-hidden="true"></i>引用类型的值是保存在内存中的对象
+        </p>
+        <p>
+            <i class="fa fa-paperclip" aria-hidden="true"></i>引用类型的值是保存在内存中的对象
+        </p>
+        <p>
+            <i class="fa fa-paperclip" aria-hidden="true"></i>引用类型的值是保存在内存中的对象
+        </p>
+    </script>
+    <div id="showjquey_content" style="display: none">
+        <p class="h3 c1 flex-between"><span>应付金额：</span><span class="block">150元</span></p>
+        <p class="h3 c1 flex-between"><span>订金</span><span class="block">10元</span></p>
+        <p class="h3 c1 flex-between"><span>实付金额</span><span class="block">140元</span></p>
+    </div>
+    <div id="showqcode_content" style="display: none">
+        <div class="qcode">
+            <img src="http://order.guoguofarm.com/service/qcode.ashx?t=123" />
+            <p>将此二维码展示给店铺即可</p>
+            <p><span class="leftTime">120</span>秒后失效</p>
+        </div>
+    </div>
+    <div class="btns">
+        <button id="showdialog">自定义窗体</button>
+        <button id="showinput">输入文本</button>
+        <button id="showjquey">显示结果</button>
+        <button id="showalert">Alert</button>
+        <button id="showalert2">Alert2</button>
+        <button id="showalert3">Alert3</button>
+        <button id="showinfo">Info</button>
+        <button id="showqcode">二维码</button>
+        <button id="showtoast">toast</button>
+        <button id="showtoast2">toast_spin</button>
+        <button id="showselect">select</button>
+        <button id="showselect2">select2</button>
+    </div>
+    <article>
+        <p>
+            RequireJS 和 SeaJS 都是很不错的模块加载器，两者区别如下：
+
+            1. 两者定位有差异。RequireJS 想成为浏览器端的模块加载器，同时也想成为 Rhino / Node 等环境的模块加载器。SeaJS 则专注于 Web 浏览器端，同时通过 Node 扩展的方式可以很方便跑在 Node 服务器端
+
+            2. 两者遵循的标准有差异。RequireJS 遵循的是 AMD（异步模块定义）规范，SeaJS 遵循的是 CMD （通用模块定义）规范。规范的不同，导致了两者 API 的不同。SeaJS 更简洁优雅，更贴近 CommonJS Modules/1.1 和 Node Modules 规范。
+
+            3. 两者社区理念有差异。RequireJS 在尝试让第三方类库修改自身来支持 RequireJS，目前只有少数社区采纳。SeaJS 不强推，而采用自主封装的方式来“海纳百川”，目前已有较成熟的封装策略。
+
+            4. 两者代码质量有差异。RequireJS 是没有明显的 bug，SeaJS 是明显没有 bug。
+
+            5. 两者对调试等的支持有差异。SeaJS 通过插件，可以实现 Fiddler 中自动映射的功能，还可以实现自动 combo 等功能，非常方便便捷。RequireJS 无这方面的支持。
+
+            6. 两者的插件机制有差异。RequireJS 采取的是在源码中预留接口的形式，源码中留有为插件而写的代码。SeaJS 采取的插件机制则与 Node 的方式一致：开放自身，让插件开发者可直接访问或修改，从而非常灵活，可以实现各种类型的插件。.
+        </p>
+        <p>
+            RequireJS 和 SeaJS 都是很不错的模块加载器，两者区别如下：
+
+            1. 两者定位有差异。RequireJS 想成为浏览器端的模块加载器，同时也想成为 Rhino / Node 等环境的模块加载器。SeaJS 则专注于 Web 浏览器端，同时通过 Node 扩展的方式可以很方便跑在 Node 服务器端
+
+            2. 两者遵循的标准有差异。RequireJS 遵循的是 AMD（异步模块定义）规范，SeaJS 遵循的是 CMD （通用模块定义）规范。规范的不同，导致了两者 API 的不同。SeaJS 更简洁优雅，更贴近 CommonJS Modules/1.1 和 Node Modules 规范。
+
+            3. 两者社区理念有差异。RequireJS 在尝试让第三方类库修改自身来支持 RequireJS，目前只有少数社区采纳。SeaJS 不强推，而采用自主封装的方式来“海纳百川”，目前已有较成熟的封装策略。
+
+            4. 两者代码质量有差异。RequireJS 是没有明显的 bug，SeaJS 是明显没有 bug。
+
+            5. 两者对调试等的支持有差异。SeaJS 通过插件，可以实现 Fiddler 中自动映射的功能，还可以实现自动 combo 等功能，非常方便便捷。RequireJS 无这方面的支持。
+
+            6. 两者的插件机制有差异。RequireJS 采取的是在源码中预留接口的形式，源码中留有为插件而写的代码。SeaJS 采取的插件机制则与 Node 的方式一致：开放自身，让插件开发者可直接访问或修改，从而非常灵活，可以实现各种类型的插件。.
+        </p>
+        <p>
+            RequireJS 和 SeaJS 都是很不错的模块加载器，两者区别如下：
+
+            1. 两者定位有差异。RequireJS 想成为浏览器端的模块加载器，同时也想成为 Rhino / Node 等环境的模块加载器。SeaJS 则专注于 Web 浏览器端，同时通过 Node 扩展的方式可以很方便跑在 Node 服务器端
+
+            2. 两者遵循的标准有差异。RequireJS 遵循的是 AMD（异步模块定义）规范，SeaJS 遵循的是 CMD （通用模块定义）规范。规范的不同，导致了两者 API 的不同。SeaJS 更简洁优雅，更贴近 CommonJS Modules/1.1 和 Node Modules 规范。
+
+            3. 两者社区理念有差异。RequireJS 在尝试让第三方类库修改自身来支持 RequireJS，目前只有少数社区采纳。SeaJS 不强推，而采用自主封装的方式来“海纳百川”，目前已有较成熟的封装策略。
+
+            4. 两者代码质量有差异。RequireJS 是没有明显的 bug，SeaJS 是明显没有 bug。
+
+            5. 两者对调试等的支持有差异。SeaJS 通过插件，可以实现 Fiddler 中自动映射的功能，还可以实现自动 combo 等功能，非常方便便捷。RequireJS 无这方面的支持。
+
+            6. 两者的插件机制有差异。RequireJS 采取的是在源码中预留接口的形式，源码中留有为插件而写的代码。SeaJS 采取的插件机制则与 Node 的方式一致：开放自身，让插件开发者可直接访问或修改，从而非常灵活，可以实现各种类型的插件。.
+        </p>
+    </article>
+
+    <script>
+        $(function () {
+            $("#showdialog").on('click', function () {
+                $.dialog('标题', '请输入内容:请输入内容:请输入内容:请输入内容:请输入内容:请输入内容<p class="warning">注意：您的金额已经不足</p>', [
+                        {
+                            text: '测试',
+                            classNames: 'btn_gray',
+                            href: '',
+                            autoClose: true,
+                            handler: function (content) { }
+                        },
+                         {
+                             text: '测试',
+                             href: '',
+                             classNames: 'btn_red',
+                             autoClose: true,
+                             handler: function (content) {
+                                 alert('测试');
+                             }
+                         },
+                        {
+                            text: '测试2',
+                            classNames: 'btn_green',
+                            autoClose: true
+                        }
+                ]);
+            });
+            $('#showinput').on('click', function () {
+                $.dialog('输入文本', $('#showinput_content').html(), [
+                  {
+                      text: '取消',
+                      autoClose: true,
+                      classNames: 'btn_gray'
+                  },
+                  {
+                      text: '确定',
+                      autoClose: true,
+                      handler: function (context) {
+                          alert(context.find('input').val());
+                      }
+                  }
+                ], function (context) {
+                    context.find('input').on('change keyup', function () {
+                        context.find('.res').text($(this).val());
+                    });
+                })
+            });
+            $('#showjquey').on('click', function () {
+                $.dialog('显示结果', $('#showjquey_content').children(), [
+                  {
+                      text: '取消',
+                      autoClose: true,
+                      classNames: 'btn_gray'
+                  },
+                  {
+                      text: '确定',
+                      autoClose: true,
+
+                  }
+                ])
+            });
+            $('#showalert').on('click', function () {
+                $.alert("标题", 'js中的数据类型分为基本类型和引用类型，下面聊聊不同的数据类型在内存中的表现。 1.引用类型的值是保存在内存中的对象，JS是不允许直接访问对象的内存空间，在操作对象的时候，操作对象的引用而不是实际的对象，复制保存着对象的某个变量时，操作的是对象的引用，但是为对象添加属性的时候，操作的时候实际的对象');
+            });
+            $('#showalert2').on('click', function () {
+                $.alert('<i class="fa fa-check fa-3x"></i>', "订单已完成");
+            });
+            $('#showalert3').on('click', function () {
+                $.alert('这是标题', $('#showalert3_content').html());
+            });
+            $('#showinfo').on('click', function () {
+                $.info('js中的数据类型分为基本类型和引用类型，下面聊聊不同的数据类型在内存中的表现。 1.引用类型的值是保存在内存中的对象，JS是不允许直接访问对象的内存空间，在操作对象的时候，操作对象的引用而不是实际的对象，复制保存着对象的某个变量时，操作的是对象的引用，但是为对象添加属性的时候，操作的时候实际的对象');
+            });
+            $('#showqcode').on('click', function () {
+                var sid = 0;
+                $('#showqcode_content>div').popup({}, function (context) {
+                    var left = 120;
+                    sid = setInterval(function () {
+                        console.log('showqcode');
+                        context.find('.leftTime').text(--left);
+                    }, 1000)
+                }, function (context) {
+                    clearInterval(sid);
+                });
+            });
+            $('#showtoast').on('click', function () {
+                $.toastDelay('已收藏', 'fa fa-heart-o', 1500);
+            });
+            $('#showtoast2').on('click', function () {
+                var toast = $.toast('正在刷新', 'fa fa-refresh fa-spin');
+                setTimeout(function () {
+                    toast.fadeOut(500, function () { toast.closePopup(); })
+                }, 2000);
+            });
+            $('#showselect').on('click', function () {
+                $.select([{
+                    text: '拨打电话',
+                    href: 'tel:13659281595',
+                    autoClose: true,
+
+                }, {
+                    text: '发送短信',
+                    href: 'sms:13659281595',
+                    autoClose: true,
+                }]);
+
+            });
+            $('#showselect2').on('click', function () {
+                $.select([{
+                    text: '<i class="icon fa fa-weibo"></i>新浪微博',
+                    classNames: 'btn_gray',
+                    href: '',
+                    autoClose: true,
+                    handler: function (content) { alert('新浪'); }
+                }, {
+                    text: '<i class="icon fa fa-wechat"></i>腾讯微信',
+                    href: '',
+                    classNames: 'btn_red',
+                    autoClose: true,
+                    handler: function (content) {
+                        alert('腾讯');
+                    }
+                }]);
+            });
+        });
+    </script>
+</body>
+</html>

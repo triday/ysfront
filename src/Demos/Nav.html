@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>导航/菜单</title>
+    <meta charset="utf-8" />
+    <link href="../css/common.css" rel="stylesheet" />
+    <link href="../css/ys.nav.css" rel="stylesheet" />
+    <style>
+        .nav {
+            margin-top: 40px;
+        }
+        .nav1 {
+            background-color: rgba(0,255,0,.5);
+        }
+            .nav1 > ul > li > a {
+                line-height: 40px;
+                height: 40px;
+                padding: 0 15px;
+            }
+
+            .nav1 > ul > li.active {
+                background-color: #0000ff;
+            }
+
+            .nav1 > ul > li:hover {
+                background-color: #b6ff00;
+            }
+
+        .nav-vertical {
+            width:200px;
+        }
+        .nav3  {
+            background-color:#ff6a00;
+           
+        }
+            .nav3 > ul > li:hover {
+                background-color:#e9931c;
+            }
+
+            .nav3 > ul > li.active {
+                 background-color:#ffd800;
+            }
+
+            .nav3 > ul > li > a {
+                 color:#fff;
+                line-height:40px;
+                padding:0 20px;
+            }
+    </style>
+</head>
+<body>
+    <div class="nav  nav-auto-width nav1">
+        <ul>
+            <li><a href="http://www.baidu.com">选项1</a>
+            
+             
+            </li>
+            <li><a href="#">选项2</a></li>
+            <li class="active"><a href="#">选项3</a></li>
+            <li><a href="#">选项4</a></li>
+            <li><a href="#">选项5</a></li>
+            <li><a href="#">选项6</a></li>
+        </ul>
+    </div>
+    <div class="nav  nav-auto-width nav1">
+        <ul class="float-right">
+            <li><a href="http://www.baidu.com">选项1</a></li>
+            <li><a href="#">选项2</a></li>
+            <li class="active"><a href="#">选项3</a></li>
+            <li><a href="#">选项4</a></li>
+            <li><a href="#">选项5</a></li>
+            <li><a href="#">选项6</a></li>
+        </ul>
+        <ul class="float-left">
+            <li><a href="http://www.baidu.com">选项1</a></li>
+            <li><a href="#">选项2</a></li>
+            <li class="active"><a href="#">选项3</a></li>
+            <li><a href="#">选项4</a></li>
+            <li><a href="#">选项5</a></li>
+            <li><a href="#">选项6</a></li>
+        </ul>
+    </div>
+    <div class="nav  nav-auto-width nav3" style="text-align:right">
+        <ul>
+            <li><a href="http://www.baidu.com">选项1</a></li>
+            <li><a href="#">选项2</a></li>
+            <li class="active"><a href="#">选项3</a></li>
+            <li><a href="#">选项4</a></li>
+            <li><a href="#">选项5</a></li>
+            <li><a href="#">选项6</a></li>
+        </ul>
+    </div>
+    <div class="nav nav3">
+        <ul>
+            <li><a href="http://www.baidu.com">选项1</a></li>
+            <li><a href="#">选项2</a></li>
+            <li><a href="#">选项3</a></li>
+            <li><a href="#">选项4</a></li>
+            <li><a href="#">选项5</a></li>
+            <li><a href="#">选项6</a></li>
+        </ul>
+    </div>
+    <div class="nav nav3">
+        <ul style="width:60%">
+            <li><a href="http://www.baidu.com">选项1</a></li>
+            <li><a href="#">选项2</a></li>
+            <li><a href="#">选项3</a></li>
+            <li><a href="#">选项4</a></li>
+            <li><a href="#">选项5</a></li>
+            <li><a href="#">选项6</a></li>
+        </ul>
+    </div>
+    <div class="nav nav-vertical nav3">
+        <ul >
+            <li><a href="http://www.baidu.com">选项1</a></li>
+            <li><a href="#">选项2</a></li>
+            <li class="active"><a href="#">选项3</a></li>
+            <li><a href="#">选项4</a></li>
+            <li><a href="#">选项5</a></li>
+            <li><a href="#">选项6</a></li>
+        </ul>
+    </div>
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <script src="../js/jquery.nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <!--<link href="../css/ys.nav.base.css" rel="stylesheet" />-->
+    <link href="../css/ys.flow.base.css" rel="stylesheet" />
+    <link href="../css/ys.flow.post.css" rel="stylesheet" />
+    <link href="../css/ys.flow.vane.css" rel="stylesheet" />
+    <link href="../css/ys.flow.list.css" rel="stylesheet" />
+    <style>
+        .flow-post {
+            margin: 1em 0;
+            padding:1.5em 0;
+            border:1px solid #ff6a00;
+        }
+        .flow-vane {
+            margin:.5em auto;
+            text-align:center;
+        }
+            .flow-vane li > :only-child:before {
+                content:counter(flow)  '、';
+                color:#0f0;
+            }
+
+        .flow-list {
+            width:400px;
+            margin:1em auto;
+        }
+            .flow-list li {
+                padding:10px 2px;
+            }
+                .flow-list li > p {
+                    font-size:80%;
+                    color:#888;
+                }
+        .flow-list li.flow-next {
+            color:#00f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flow flow-post">
+        <ul>
+            <li class="flow-over">
+   
+                <p class="under">2016-8-25 14:32:28</p>
+            </li>
+            <li class="flow-over">
+
+                <p class="under">2016-8-25 14:32:28</p>
+            </li>
+            <li class="flow-current">
+  
+                <p class="under">2016-8-25 14:32:28</p>
+            </li>
+            <li class="flow-next">
+
+                <p class="under">2016-8-25 14:32:28</p>
+            </li>
+        </ul>
+    </div>
+    <div class=" flow flow-post">
+        <ul>
+            <li class="flow-over">
+                <p class="above"> 上面的</p>
+
+            </li>
+            <li class="flow-over">
+                <p class="above"> 上面的</p>
+
+            </li>
+            <li class="flow-current">
+                <p class="above"> 上面的</p>
+
+            </li>
+            <li class="flow-next">
+                <p class="above"> 上面的</p>
+
+            </li>
+            <li class="flow-next">
+                <p class="above"> 上面的</p>
+ 
+            </li>
+            <li class="flow-next">
+                <p class="above"> 上面的</p>
+
+            </li>
+        </ul>
+    </div>
+    <div class="flow flow-post">
+        <ul>
+            <li class="flow-over">
+                <p class="above"> 上面的</p>
+                <p class="under">2016-8-25 14:32:28</p>
+            </li>
+            <li class="flow-over">
+                <p class="above"> 上面的</p>
+                <p class="under">2016-8-25 14:32:28</p>
+            </li>
+            <li class="flow-current">
+                <p class="above"> 上面的</p>
+                <p class="under">2016-8-25 14:32:28</p>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="flow flow-vane ">
+        <ul>
+            <li class="flow-current"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+        </ul>
+    </div>
+    <div class="flow flow-vane ">
+        <ul>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-current"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+        </ul>
+    </div>
+
+
+    <div class="flow flow-vane ">
+        <ul>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-current"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+        </ul>
+    </div>
+    <div class="flow flow-vane ">
+        <ul>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-current"><p>ONE</p></li>
+            <li class="flow-next"><p>ONE</p></li>
+        </ul>
+    </div>
+    <div class="flow flow-vane ">
+        <ul>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-over"><p>ONE</p></li>
+            <li class="flow-current"><p>ONE</p></li>
+        </ul>
+    </div>
+
+
+    <div class="list flow flow-list">
+        <ul>
+            <li class="flow-next">
+                <time>预计到达：2016-06-06 18:07:15</time>
+                <p>感谢您在何问起购物，欢迎您再次光临！</p>
+            </li>
+            <li class="flow-next">
+                <time>预计到达：2016-06-06 17:57:23</time>
+                <p>配送员【何问起】已出发，联系信息【微信公众号：何问起，感谢您的耐心等待，参加评价还能赢取何币呦】</p>
+            </li>
+            <li class="flow-current">
+                <time>2016-06-06 16:27:05</time>
+                <p>您的订单在中山分拨中心【何问起】站验货完成，正在分配送员</p>
+            </li>
+            <li class="flow-over">
+                <time>2016-06-06 01:07:50</time>
+                <p>您的订单已在何问起广州分拨中心发货完成，准备发往中山分拨中心</p>
+            </li>
+            <li class="flow-over">
+                <time>2016-06-05 10:07:15</time>
+                <p>您的订单已经进入何问起南京分拨中心，准备发往广州分拨中心</p>
+            </li>
+            <li class="flow-over">
+                <time>2016-06-05 8:00:05</time>
+                <p>您提交了订单，请等待何问起系统的确认</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

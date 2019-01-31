@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .down, .up {
+            display: inline-block;
+            padding: 0;
+            text-decoration: none;
+        }
+
+            .down:before, .up:before {
+                content: '';
+            }
+
+            .down:before {
+                content: '-';
+            }
+
+            .up:before {
+                content: '+';
+            }
+    </style>
+</head>
+<body ontouchstart="">
+    <div>
+        <a href="javascript:;" class="sub down"></a>
+        <input type="number" name="OrderCount" value="" min="1" max="9999" step="30">
+        <a href="javascript:;" class="add up"></a>
+    </div>
+    <div>
+        <a href="javascript:;" class="sub down"></a>
+        <input type="number" name="OrderCount" value="" min="1" max="9999" step="30">
+        <a href="javascript:;" class="add up"></a>
+    </div>
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <script src="../js/jquery.inputnum.js"></script>
+    <script>
+        $('input[name="OrderCount"]').numInput();
+    </script>
+
+</body>
+</html>

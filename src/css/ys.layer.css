@@ -1,0 +1,25 @@
+﻿.layer-container {
+    position: relative;
+}
+
+    .layer-container > .layer-back {
+        width: 100%;
+    }
+
+    .layer-container > .layer {
+        position: absolute;
+    }
+
+    .layer-container > .layer-hover {
+        display: none;
+    }
+
+    .layer-container:hover > .layer-hover {
+        display:block;
+        display: initial;
+    }
+
+.qcode > .logo {
+    width:20%;
+    height:20%;
+}

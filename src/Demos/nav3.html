@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <!--<link href="../css/ys.nav.css" rel="stylesheet" />-->
+    <style>
+        .nav ul, .nav ul > li, nav ul > li > a {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin-left: auto;
+            margin-right: auto;
+            white-space: nowrap;
+        }
+
+        .nav > ul > li > a {
+            text-decoration: none;
+            color: #000;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        /*.nav-accordion > ul > li, .nav-accordion > ul > li > a, .nav-accordion > ul > li > div {
+            float: left;
+
+        }*/
+    </style>
+    <style>
+        .nav-left {
+            width: 250px;
+            background-color: #ffd800;
+        }
+
+            .nav-left > ul > li {
+                border: 1px solid #ff0000;
+                border-top-width: 0;
+            }
+
+                .nav-left > ul > li:first-child {
+                    border-top-width: 1px;
+                }
+
+                .nav-left > ul > li > a {
+                    padding: 10px;
+                    font-weight: bold;
+                }
+
+                    .nav-left > ul > li > a > .display-state-arrow {
+                        float: right;
+                        width: 1em;
+                    }
+
+                .nav-left > ul > li ul > li {
+                    padding: 10px 5px 10px 20px;
+                    font-weight: normal;
+                    border: 1px solid #ff0000;
+                    border-width: 1px 0px 0px 0px;
+                    background-color: #ffb300;
+                }
+
+        /*.nav-accordion {
+            position: relative;
+            width: 960px;
+            border: 1px solid #ff6a00;
+        }
+
+            .nav-accordion > ul > li > a {
+                width: 40px;
+                background-color: #ff6a00;
+                border: 1px solid #f00;
+                display: block;
+                line-height: 200px;
+            }*/
+
+        /*.item {
+            display: table;
+            overflow: hidden;
+            zoom: 1;
+        }
+
+            li > .left, .item > .right {
+                display: table-cell;
+                vertical-align: middle;
+                white-space: nowrap;
+            }
+
+            li > .body {
+                display: table-cell;
+                vertical-align: top;
+                overflow: hidden;
+                zoom: 1;
+                width: 10000px;
+                white-space: normal;
+            }*/
+    </style>
+    <link href="../css/common.css" rel="stylesheet" />
+
+    <link href="../css/ys.display.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="nav nav-accordion nav-left clear">
+        <ul class="">
+            <li class="display-close active">
+                <a href="#" class="clear" data-display-target=".nav"  >
+                    测试1
+                    <img class="display-state-arrow" src="../images/arrow_up.png" />
+                </a>
+                <div class="nav body" style="display:none">
+                    <ul>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="display-close" data-display-target=".nav">
+                <a href="#" class="clear" >测试2<img class="display-state-arrow" src="../images/arrow_up.png" /></a>
+
+                <div class="nav body" style="display:none">
+                    <ul>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="display-close" data-display-target=".nav">
+                <a href="#" class="clear" >测试3<img class="display-state-arrow" src="../images/arrow_up.png" /></a>
+                <div class="nav body" style="display:none">
+                    <ul>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="display-close"  data-display-target=".nav">
+                <a href="#" class="clear">测试4<img class="display-state-arrow" src="../images/arrow_up.png" /></a>
+                <div class="nav body" style="display:none">
+                    <ul>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav nav-accordion clear">
+        <ul class="">
+            <li class="active">
+                <a href="#" class="left">测试1</a>
+                <div class="nav body">
+                    <ul>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                        <li><a href="#">aaa</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="">
+                <a href="#" class="left">测试2</a>
+                <div class="nav body">
+                    <ul>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                        <li><a href="#">bbb</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="">
+                <a href="#" class="left">测试3</a>
+                <div class="nav body">
+                    <ul>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                        <li><a href="#">ccc</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="">
+                <a href="#" class="left">测试4</a>
+                <div class="nav body">
+                    <ul>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                        <li><a href="#">ddd</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="../Scripts/jquery-3.1.0.min.js"></script>
+    <!--<script src="../js/jquery.nav.js"></script>-->
+    <script src="../js/jquery.display.js"></script>
+    <script>
+        $('.nav-accordion').display({ displayKind: 'single' });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Arrow(CSS)</title>
+    <meta charset="utf-8" />
+    <link href="../css/ys.arrow.css" rel="stylesheet" />
+    <style>
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: #ff6a00;
+            margin: 50px auto;
+        }
+            .box::after, .box:before {
+                border-width: 8px;
+                border-color: #ff6a00;
+            }
+
+        .box2 {
+            background-color:#b6ff00;
+            border:1px solid #f00;
+            padding:10px 20px;
+            margin:20px;
+            display:inline-block;
+            border-radius:4px;
+            word-break:break-word;
+        }
+        .box2:before {
+            border-width:9px;
+            border-color:#f00;
+        }
+            .box2:after {
+                border-width:8px;
+                border-color:#b6ff00;
+            }
+            .box2.arrow-left::before, .box2.arrow-left::after {
+                top:20px;
+            }
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="box arrow-left">
+
+        </div>
+        <div class="box arrow-right">
+
+        </div>
+        <div class="box arrow-top">
+
+        </div>
+        <div class="box arrow-bottom">
+
+        </div>
+    </div>
+    <div>
+        <span class="box2 arrow-top">
+            Hello,World
+        </span>
+        <p class="box2 arrow-bottom">
+            Hello,World
+        </p>
+        <p class="box2 arrow-left">
+            Hello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,WorldHello,World
+        </p>
+        <span class="box2 arrow-right">
+            Hello,World
+        </span>
+       
+    </div>
+</body>
+</html>
