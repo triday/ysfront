@@ -1,39 +1,15 @@
 ﻿
 
-//P5
-function forEach(array, action) {
-    for (var i = 0; i < array.length; i++) {
-        action(array[i]);
-    }
-}
+
 //函数求反
 function negate(func) {
     return function () {
         return !func.apply(null, arguments)
     }
 }
-//归约函数
-function reduce(combine, base, array) {
-    forEach(array, function (element) {
-        base = combine(base, element);
-    });
-    return base;
-}
-//映射函数
-function map(func, array) {
-    var result = [];
-    forEach(array, function (element) {
-        result.push(func(element));
-    });
-    return result;
-}
-var op = {
-    "+": function (a, b) { return a + b; },
-    "-": function (a, b) { return a - b; },
-    "==": function (a, b) { return a == b; },
-    "===": function (a, b) { return a == b; },
-    "!": function (a) { return !a; },
-};
+
+
+
 //分布应用函数
 function partial(func) {
     var knowArgs = arguments;

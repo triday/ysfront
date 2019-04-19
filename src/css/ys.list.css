@@ -1,14 +1,5 @@
-﻿.list ul,.list ol,.list li {
+﻿.list ul, .list ol, .list li {
     padding: 0;
     margin: 0;
     list-style-type: none;
 }
-
-
-.list a {
-    text-decoration: none;
-    color: #000;
-}
-
-
-

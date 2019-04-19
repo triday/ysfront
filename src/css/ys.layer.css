@@ -15,7 +15,6 @@
     }
 
     .layer-container:hover > .layer-hover {
-        display:block;
         display: initial;
     }
 
